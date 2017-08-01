@@ -1,12 +1,147 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
 <head>
 
-	<title></title>
+	<title>Psychic Game</title>
+
+
+<!--  17 Bring in our bootstrap stylesheet -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+
+
 </head>
+
+<!-- console.log(). -->
+
 
 <body>
 
+<!-- Data Types, User Input, Conditional Logic -->
+
+<script type="text/javascript">
+
+ 
+
+
+    var words = [
+
+      	  "soccer", 
+      	  "jumbo", 
+      	  "poptart", 
+      	  "fabulous", 
+      	  "iphone", 
+      	  "automobile", 
+      	  "bubbles", 
+      	  "fireworks",   
+        ];
+
+    // Pick a random word
+
+    var word = words[Math.floor(Math.random() * words.length)];
+
+    // Set up the answer array
+
+    var answerArray = [];
+
+    for (var i = 0; i < word.length; i++) {
+
+      answerArray[i] = "_";
+
+    }
+
+        // Pick a random word
+
+    var word = words[Math.floor(Math.random() * words.length)];
+
+    // Set up the answer array
+
+    var answerArray = [];
+
+    for (var i = 0; i < word.length; i++) {
+
+      answerArray[i] = "_";
+
+    }
+
+    var remainingLetters = word.length;
+
+    // The game loop
+
+    while (remainingLetters > 0) {
+
+      // Show the player their progress
+
+      alert(answerArray.join(" "));
+
+      // Get a guess from the player
+
+      var guess = prompt("Guess a letter in the word, or click Cancel to stop game.");
+
+      if (guess === null) {
+
+        // Exit the game loop
+
+        break;
+
+      } else if (guess.length !== 1) {
+
+        alert("Please enter a single letter.");
+
+      } else {
+
+        // Update the game state with the guess
+
+        for (var j = 0; j < word.length; j++) {
+
+          if (word[j] === guess) {
+            answerArray[j] = guess;
+            remainingLetters--;
+
+          }
+
+        }
+
+      }
+
+
+    }
+
+    // answer
+
+    alert(answerArray.join(" "));
+
+   
+    </script>
+
 </body>
+
+</html
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+
+
+
 
 </html>
